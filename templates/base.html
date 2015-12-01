@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>V1 Query Tool</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+        <form class="form-signin" action="/search" method="post">
+          <label for="assets" class="sr-only">Assets</label>
+          <input type="name" name="assets" id="assets" class="form-control" placeholder="Assets" required autofocus>
+          <label for="usr" class="sr-only">User</label>
+          <input type="User" name="usr" id="usr" class="form-control" placeholder="User" required autofocus>
+          <label for="pwd" class="sr-only">Password</label>
+          <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Password" required>
+          <input type="hidden" name="assetType" value="defect"/>
+          <button id="btnSearch" name="action" value="Create" class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
+        </form>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>

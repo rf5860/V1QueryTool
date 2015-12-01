@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+  <h3>Search results for "{{  ','.join(ids) }}":</h3>
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Owners</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for asset in assets %}
+      {% include 'item.html' %}
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

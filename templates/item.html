@@ -1,0 +1,7 @@
+
+    <tr name="defect" valign="top">
+        <td name="defectId" valign="top">{{ asset.Number }}</td>
+        <td name="defectDesc" valign="top">{{ asset.Name }}</td>
+        <td name="defectStatus" valign="top"> {{ asset.Status.Name }}</td>
+        <td name="defectOwners" valign="top">{% for owner in asset.Owners %} {{ owner.Name }},{% endfor %}</td>
+    </tr>
